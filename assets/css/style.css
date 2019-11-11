@@ -48,20 +48,21 @@ body{
 .first-w{
     height: 10%;
     width: 100%;
-    background-color: #EEEEEE;
 }
 
 /* stile nome user */
 .username{
     width: 30%;
-    background-color: #EEEEEE;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid grey;
+    border-right: 1px solid grey;
 }
 
 /* stile dell'immagine */
 .username > .userimg{
-    height: 70px;
+    height: 60px;
     border-radius: 50%;
     margin-left: 20px;
 }
@@ -75,14 +76,26 @@ body{
 /* stile nome chat */
 .chatname{
     width: 70%;
-    background-color: palegreen;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+}
+
+.chatname img{
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.chatname span{
+    font-size: 20px;
+    margin-left: 50px;
 }
 
 /* stile barra laterale sinistra */
 .left-section{
     width: 30%;
     height: 90%;
-    background-color: palevioletred;
 }
 
 /* stile sezione notifiche */
@@ -93,6 +106,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-flow: wrap column;
+    border-bottom: 1px solid grey;
 }
 
 .notifiche #par-1{
@@ -111,6 +125,7 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid grey;
 }
 
 .cerca input{
@@ -121,20 +136,20 @@ body{
 }
 
 .cerca a{
-    color: #000;
+    color: #BDC1C3;
     text-decoration: none;
 }
 /* stile lista contatti */
 .contact-list{
     height: 80%;
-    background-color: #F4F5F5;
+    background-color: #FFFFFF;
     overflow-y: scroll;
 }
 
 /* stile elementi lista contatti */
 .contact-list .contact-me{
     height: 10%;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid grey;
     display: flex;
     align-items: center;
 }
@@ -160,11 +175,28 @@ body{
 /* stile sezione chatbox */
 .chatbox{
     height: 90%;
-    background-color: seagreen;
+    background: linear-gradient(45deg, lightgrey,grey, lightgrey) 0 0 / 1000% no-repeat;
 }
 
 /* stile inputfield */
 .inputfield{
     height: 10%;
-    background-color: yellow;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: scroll;
+}
+
+.inputfield a{
+    text-decoration: none;
+    color: #BDC1C3;
+    font-size: 30px;
+}
+
+.inputfield input{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
 }

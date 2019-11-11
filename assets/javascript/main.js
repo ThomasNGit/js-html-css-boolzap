@@ -1,0 +1,1 @@
+//creare uno script che permetta di stampare in pagina qullo che l'user inserisce nella finestra di imput
