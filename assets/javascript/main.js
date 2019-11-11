@@ -12,7 +12,7 @@ $( document ).ready(function() {
         console.log(messaggio);
         
 
-        var elementmsg = $("#template .userinput").clone();
+        var elementmsg = $("#template .userinput .usertxt").clone();
 
         console.log(elementmsg);
         

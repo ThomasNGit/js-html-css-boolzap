@@ -8,6 +8,7 @@
 /* stile font */
 body{
     font-family: Roboto, sans-serif;
+    overflow-y: hidden;
 }
 
 /* regole stile contenitore globale */
@@ -53,11 +54,11 @@ body{
 /* stile nome user */
 .username{
     width: 30%;
-    background-color: #FFFFFF;
+    background-color: #E9ECEF;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid grey;
-    border-right: 1px solid grey;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
 }
 
 /* stile dell'immagine */
@@ -76,7 +77,7 @@ body{
 /* stile nome chat */
 .chatname{
     width: 70%;
-    background-color: #FFFFFF;
+    background-color: #E9ECEF;
     display: flex;
     align-items: center;
 }
@@ -142,14 +143,14 @@ body{
 /* stile lista contatti */
 .contact-list{
     height: 80%;
-    background-color: #FFFFFF;
+    background-color: #E9ECEF;
     overflow-y: scroll;
 }
 
 /* stile elementi lista contatti */
 .contact-list .contact-me{
     height: 10%;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid black;
     display: flex;
     align-items: center;
 }
@@ -175,17 +176,17 @@ body{
 /* stile sezione chatbox */
 .chatbox{
     height: 90%;
-    background: linear-gradient(45deg, lightgrey,grey, lightgrey) 0 0 / 1000% no-repeat;
+    overflow-y: scroll;
+    background-image: url('../img/waimg.jpg');
 }
 
 /* stile inputfield */
 .inputfield{
     height: 10%;
-    background-color: #FFFFFF;
+    background-color: #E9ECEF;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    overflow-y: scroll;
 }
 
 .inputfield a{
@@ -203,4 +204,13 @@ body{
 
 #template{
     display: none;
+}
+
+/* stile dell'input dell'utente */
+.usertxt{
+    background-color: green;
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
 }
