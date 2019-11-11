@@ -200,3 +200,7 @@ body{
     border: 1px solid black;
     border-radius: 10px;
 }
+
+#template{
+    display: none;
+}
