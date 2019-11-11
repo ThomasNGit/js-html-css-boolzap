@@ -179,7 +179,9 @@ body{
     height: 90%;
     overflow-y: scroll;
     background-image: url('../img/waimg.jpg');
-    position: relative;
+    display: flex;
+    flex-flow: wrap column;
+    align-items: flex-end;
 }
 
 /* stile inputfield */
@@ -204,22 +206,17 @@ body{
     border-radius: 10px;
 }
 
-#template{
-    display: none;
-}
 
 /* stile dell'input dell'utente */
 #userinput{
-    width: min-content;
-    max-width: 400px;
     background-color: green;
-    text-align: right;
-    font-size: 18px;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid black;
-    border-radius: 10px;
-    padding: 20px;
-    display: flex;
-    flex-flow: wrap row;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    margin: 10px;
 }
 
+#template{
+    display: none;
+}
