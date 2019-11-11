@@ -80,6 +80,7 @@ body{
     background-color: #E9ECEF;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid black;
 }
 
 .chatname img{
@@ -178,6 +179,7 @@ body{
     height: 90%;
     overflow-y: scroll;
     background-image: url('../img/waimg.jpg');
+    position: relative;
 }
 
 /* stile inputfield */
@@ -207,10 +209,17 @@ body{
 }
 
 /* stile dell'input dell'utente */
-.usertxt{
+#userinput{
+    width: min-content;
+    max-width: 400px;
     background-color: green;
+    text-align: right;
     font-size: 18px;
-    display: flex;
-    justify-content: flex-end;
     padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-flow: wrap row;
 }
+
