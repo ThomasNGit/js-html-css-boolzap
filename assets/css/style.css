@@ -1,0 +1,31 @@
+/* regole generali di pagina */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.global-container{
+    width: 100%;
+    height: 100vh;
+}
+
+.green-container{
+    height: 20%;
+    background-color: #1EBEA5;
+}
+
+.grey-container{
+    height: 80%;
+    background-color: #D7DBD6;
+}
+
+.app-window{
+    height: 80%;
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+}
