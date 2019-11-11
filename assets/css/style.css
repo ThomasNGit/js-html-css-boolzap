@@ -88,7 +88,20 @@ body{
 /* stile sezione notifiche */
 .notifiche{
     height: 15%;
-    background-color: blue;
+    background-color: #9DE1FE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: wrap column;
+}
+
+.notifiche #par-1{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.notifiche #par-2{
+    font-size: 14px;
 }
 
 /* stile searchbar */
