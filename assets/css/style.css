@@ -5,21 +5,30 @@
     box-sizing: border-box;
 }
 
+/* stile font */
+body{
+    font-family: Roboto, sans-serif;
+}
+
+/* regole stile contenitore globale */
 .global-container{
     width: 100%;
     height: 100vh;
 }
 
+/* stile bg verde */
 .green-container{
     height: 20%;
     background-color: #1EBEA5;
 }
 
+/* stile bg grigio */
 .grey-container{
     height: 80%;
     background-color: #D7DBD6;
 }
 
+/* stile finestra webapp */
 .app-window{
     height: 90%;
     width: 80%;
@@ -27,23 +36,93 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
 }
 
 .wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* wrapper del nome user + nome chat */
+.first-w{
     height: 10%;
     width: 100%;
-    background-color: orange;
-    display: flex;
-    justify-content: space-between;
+    background-color: #EEEEEE;
 }
 
+/* stile nome user */
 .username{
     width: 30%;
-    background-color: green;
+    background-color: #EEEEEE;
+    display: flex;
+    align-items: center;
 }
 
+/* stile dell'immagine */
+.username > .userimg{
+    height: 70px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* stile della scritta */
+.username > span{
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+/* stile nome chat */
 .chatname{
     width: 70%;
     background-color: palegreen;
+}
+
+/* stile barra laterale sinistra */
+.left-section{
+    width: 30%;
+    height: 90%;
+    background-color: palevioletred;
+}
+
+/* stile sezione notifiche */
+.notifiche{
+    height: 15%;
+    background-color: blue;
+}
+
+/* stile searchbar */
+.cerca{
+    height: 10%;
+    background-color: plum;
+}
+
+/* stile lista contatti */
+.contact-list{
+    height: 75%;
+    background-color: royalblue;
+}
+
+/* stile secondo wrapper */
+.second-w{
+    height: 100%;
+    width: 100%;
+}
+
+/* stile sezione chatbox e inputfield */
+.right-section{
+    width: 70%;
+    height: 90%;
+}
+
+/* stile sezione chatbox */
+.chatbox{
+    height: 90%;
+    background-color: seagreen;
+}
+
+/* stile inputfield */
+.inputfield{
+    height: 10%;
+    background-color: yellow;
 }

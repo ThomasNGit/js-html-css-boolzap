@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet"> 
     <title>Boolzapp</title>
 </head>
 <body>
@@ -14,11 +15,32 @@
         <div class="grey-container"></div>
         <!--div contenente la chatbox  -->
         <div class="app-window">
-            <div class="wrapper">
+            <div class="wrapper first-w">
                 <!-- div contenente nome utente -->
-                <div class="username"></div>
+                <div class="username">
+                    <img class="userimg" src="assets/img/me.jpg" alt="User">
+                    <span>Ciao, Thomas!</span>
+                </div>
                 <!-- div contenente nome chat -->
                 <div class="chatname"></div>
+            </div>
+            <div class="wrapper second-w">
+            <!-- div contenente la sezione di sinistra della webapp -->
+                <div class="left-section">
+                    <!-- sezione notifica -->
+                    <div class="notifiche"></div>
+                    <!-- sezione searchbar -->
+                    <div class="cerca"></div>
+                    <!-- sezione lista contatti -->
+                    <div class="contact-list"></div>
+                </div>
+                <!-- div contenente la chatbox e la stringa di chat -->
+                <div class="right-section">
+                    <!-- div della chatbox -->
+                    <div class="chatbox"></div>
+                    <!-- div del campo inserimento messaggi -->
+                    <div class="inputfield"></div>
+                </div>
             </div>
         </div>
     </div>    
