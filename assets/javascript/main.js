@@ -94,7 +94,10 @@ $( document ).ready(function() {
            }
 
         });
-        
+
+        //ripulisco la searchbar
+        $("#searchtxt").val("");
+
     });
 
     //aggiunta funzione con tasto invio
@@ -112,9 +115,13 @@ $( document ).ready(function() {
         if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){ //se il testo inserito dall'utente corrisponde a qualcosa nella lista
 
             $(this).show(); //mostra i contatti corrispondenti
+
         }
 
         });
+
+        //ripulisco la searchbar
+        $("#searchtxt").val("");
 
     }
 });
