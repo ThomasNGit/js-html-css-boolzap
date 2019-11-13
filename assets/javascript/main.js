@@ -46,7 +46,7 @@ $( document ).ready(function() {
 
             console.log("ho cliccato");
 
-                    //salvo il valore dell'input utente
+            //salvo il valore dell'input utente
             var messaggio = $(".usermsg").val();
 
             console.log(messaggio);
@@ -78,13 +78,21 @@ $( document ).ready(function() {
         }
 
     })
-    $("#contact-search").click(function(){
-        $(".contact-me").hide();
-        var txt = $("#searchtxt").val();
-        $(".contact-me").each(function(){
-           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
-               $(this).show();
+
+    //creo la funzione di callback della searchbar
+    $("#contact-search").click(function(){ //al click della lente d'ingrandimento dopo un input(se vuoto non fa nulla)
+
+        $(".contact-me").hide(); //nasconde tutti i contatti
+
+        var txt = $("#searchtxt").val(); //salvo il valore dell'input dell'utente
+
+        $(".contact-me").each(function(){ //funzione per ciclare nella lista contatti
+
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){ //se il testo inserito dall'utente corrisponde a qualcosa nella lista
+
+               $(this).show(); //mostra i contatti corrispondenti
            }
+
         });
     });
 
