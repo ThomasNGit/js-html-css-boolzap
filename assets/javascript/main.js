@@ -78,6 +78,15 @@ $( document ).ready(function() {
         }
 
     })
+    $("#contact-search").click(function(){
+        $(".contact-me").hide();
+        var txt = $("#searchtxt").val();
+        $(".contact-me").each(function(){
+           if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){
+               $(this).show();
+           }
+        });
+    });
 
 })
 
