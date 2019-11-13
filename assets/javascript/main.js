@@ -94,8 +94,30 @@ $( document ).ready(function() {
            }
 
         });
+        
     });
 
+    //aggiunta funzione con tasto invio
+
+    $("#searchtxt").keypress(function(y){ //al click della lente d'ingrandimento dopo un input(se vuoto non fa nulla)
+
+    if(y.which == 13){
+
+        $(".contact-me").hide(); //nasconde tutti i contatti
+
+        var txt = $("#searchtxt").val(); //salvo il valore dell'input dell'utente
+
+        $(".contact-me").each(function(){ //funzione per ciclare nella lista contatti
+
+        if($(this).text().toUpperCase().indexOf(txt.toUpperCase()) != -1){ //se il testo inserito dall'utente corrisponde a qualcosa nella lista
+
+            $(this).show(); //mostra i contatti corrispondenti
+        }
+
+        });
+
+    }
+});
 })
 
 
