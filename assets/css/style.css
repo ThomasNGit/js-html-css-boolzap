@@ -8,7 +8,6 @@
 /* stile font */
 body{
     font-family: Roboto, sans-serif;
-    overflow-y: hidden;
 }
 
 /* regole stile contenitore globale */
@@ -31,7 +30,7 @@ body{
 
 /* stile finestra webapp */
 .app-window{
-    height: 90%;
+    height: 95%;
     width: 80%;
     position: absolute;
     top: 50%;
@@ -57,8 +56,7 @@ body{
     background-color: #E9ECEF;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border-right: 1px solid lightgray;
 }
 
 /* stile dell'immagine */
@@ -66,12 +64,24 @@ body{
     height: 60px;
     border-radius: 50%;
     margin-left: 20px;
+    border: 1px solid black;
 }
 
 /* stile della scritta */
 .username > span{
     font-size: 20px;
-    margin-left: 50px;
+    margin-left: 20px;
+}
+
+.username a:first-of-type{
+    margin-left: 160px;
+}
+
+.username a{
+    padding-right: 30px;
+    color: #BDC1C3;
+    font-size: 20px;
+    text-decoration: none;
 }
 
 /* stile nome chat */
@@ -80,35 +90,60 @@ body{
     background-color: #E9ECEF;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid black;
+    justify-content: space-between;
 }
 
 .chatname img{
     height: 60px;
     border-radius: 50%;
     margin-left: 20px;
+    border: 1px solid black;
+}
+.chatname div{
+    line-height: 35px;
+}
+.chatname .chatname-name{
+    font-size: 20px;
+    margin-right: 380px;
 }
 
-.chatname span{
+.chatname .ultimoacc{
+    font-size: 14px;
+}
+
+/* stile icone  */
+.chatname .icons{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
     font-size: 20px;
-    margin-left: 50px;
+}
+
+.chatname .icons a{
+    color: #BDC1C3;
+    text-decoration: none;
+}
+
+/* stile secondo wrapper */
+.second-w{
+    height: 90%;
+    width: 100%;
 }
 
 /* stile barra laterale sinistra */
 .left-section{
+    height: 100%;
     width: 30%;
-    height: 90%;
 }
 
 /* stile sezione notifiche */
 .notifiche{
-    height: 15%;
+    height: 10%;
     background-color: #9DE1FE;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: wrap column;
-    border-bottom: 1px solid grey;
 }
 
 .notifiche #par-1{
@@ -127,7 +162,6 @@ body{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid grey;
 }
 
 .cerca input{
@@ -143,7 +177,7 @@ body{
 }
 /* stile lista contatti */
 .contact-list{
-    height: 80%;
+    height: calc(100% - 10% - 5%);
     background-color: #E9ECEF;
     overflow-y: scroll;
 }
@@ -151,37 +185,47 @@ body{
 /* stile elementi lista contatti */
 .contact-list .contact-me{
     height: 10%;
-    border-bottom: 1px solid black;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid grey;
 }
 
 .contact-list .contact-me img{
     height: 50px;
     border-radius: 50%;
     margin: 0 10px;
+    border: 1px solid black;
 }
 
-/* stile secondo wrapper */
-.second-w{
-    height: 100%;
-    width: 100%;
-}
 
 /* stile sezione chatbox e inputfield */
 .right-section{
+    height: 100%;
     width: 70%;
-    height: 90%;
 }
 
 /* stile sezione chatbox */
 .chatbox{
     height: 90%;
-    overflow-y: scroll;
     background-image: url('../img/waimg.jpg');
     display: flex;
-    flex-flow: wrap column;
+    flex-direction: column;
     align-items: flex-end;
+    overflow-y: scroll;
+}
+
+.chatbox #risposta{
+    align-self: flex-start;
+    background-color: lightgray;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #000;
+    margin-top: 20px;
+    margin-left: 50px;
+    word-wrap: break-word;
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
 /* stile inputfield */
@@ -214,7 +258,11 @@ body{
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 0 5px #000;
-    margin: 10px;
+    margin-top: 20px;
+    margin-right: 50px;
+    word-wrap: break-word;
+    max-width: 300px;
+    margin-bottom: 20px;
 }
 
 #template{
