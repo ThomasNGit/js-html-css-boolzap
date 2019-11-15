@@ -89,26 +89,26 @@ body{
     width: 70%;
     background-color: #E9ECEF;
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .chatname img{
-    height: 60px;
+    height: 50px;
     border-radius: 50%;
     margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 37px;
     border: 1px solid black;
 }
-.chatname div{
-    line-height: 35px;
-}
+
 .chatname .chatname-name{
-    font-size: 20px;
-    margin-right: 380px;
+    font-size: 25px;
 }
 
 .chatname .ultimoacc{
-    font-size: 14px;
+    font-size: 12px;
+    margin-left: 100px;
 }
 
 /* stile icone  */
@@ -191,12 +191,11 @@ body{
 }
 
 .contact-list .contact-me img{
-    height: 50px;
+    height: 55px;
     border-radius: 50%;
     margin: 0 10px;
     border: 1px solid black;
 }
-
 
 /* stile sezione chatbox e inputfield */
 .right-section{
@@ -208,14 +207,14 @@ body{
 .chatbox{
     height: 90%;
     background-image: url('../img/waimg.jpg');
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     overflow-y: scroll;
 }
 
-.chatbox #risposta{
-    align-self: flex-start;
+#hidden-chat{
+    display: none;
+}
+
+#risposta{
     background-color: lightgray;
     padding: 10px;
     border: 1px solid black;
@@ -226,6 +225,7 @@ body{
     word-wrap: break-word;
     max-width: 300px;
     margin-bottom: 20px;
+    align-self: flex-start;
 }
 
 /* stile inputfield */
@@ -250,6 +250,9 @@ body{
     border-radius: 10px;
 }
 
+.inputfield input:focus{
+    box-shadow: 0px 0px 5px black;
+}
 
 /* stile dell'input dell'utente */
 #userinput{
@@ -263,8 +266,26 @@ body{
     word-wrap: break-word;
     max-width: 300px;
     margin-bottom: 20px;
+    align-self: flex-end;
 }
+
+
 
 #template{
     display: none;
 }
+
+
+.contact-active{
+    background-color: darkgray;
+}
+
+.hidden-chat{
+    display: none !important
+}
+
+.chat-active{
+    display: flex !important;
+    flex-direction: column;
+}
+

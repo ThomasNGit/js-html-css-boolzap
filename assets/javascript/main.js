@@ -1,6 +1,12 @@
 //creare uno script che permetta di stampare in pagina qullo che l'user inserisce nella finestra di imput
 $( document ).ready(function() {
 
+    function userAttivo(){
+        var userAttivo = $(".contact-me.contact-active").html();
+        $(".chatname .chatname-name").html(userAttivo);
+    }
+
+    userAttivo();
 
     //creo la funzione che cliccando sul pulsante il messaggio viene inviato
     $(".sendmsg").click(function(){
@@ -24,13 +30,13 @@ $( document ).ready(function() {
         elementmsg.text(messaggio);
 
         //appendo il testo nel div della chatbox
-        $(".chatbox").append(elementmsg);
+        $(".chatbox.chat-active").append(elementmsg);
         
         //creo funzione e intervallo che fa comparire una risposta
         setTimeout(response, 1000);
 
         function response(){
-            $(".chatbox").append(risposta);
+            $(".chatbox.chat-active").append(risposta);
         }
         
         
@@ -63,13 +69,13 @@ $( document ).ready(function() {
             elementmsg.text(messaggio);
 
             //appendo il testo nel div della chatbox
-            $(".chatbox").append(elementmsg);
+            $(".chatbox.chat-active").append(elementmsg);
 
             //creo funzione e intervallo che fa comparire una risposta
             setTimeout(response, 1000);
 
             function response(){
-                $(".chatbox").append(risposta);
+                $(".chatbox.chat-active").append(risposta);
             }
            
             //ripulisco il contenuto dell'inputfield
@@ -102,7 +108,7 @@ $( document ).ready(function() {
 
     //aggiunta funzione con tasto invio
 
-    $("#searchtxt").keypress(function(y){ //al click della lente d'ingrandimento dopo un input(se vuoto non fa nulla)
+    $("#searchtxt").keypress(function(y){ //all'input dell'utente(se vuoto non fa nulla)
 
     if(y.which == 13){
 
@@ -123,8 +129,27 @@ $( document ).ready(function() {
         //ripulisco la searchbar
         $("#searchtxt").val("");
 
-    }
-});
+        }
+
+    });
+
+    $(".contact-me").click(function(){
+
+        activeContact = $(".contact-me.contact-active")
+        
+        activeContact.removeClass("contact-active");
+        
+        $(this).addClass("contact-active");
+
+        var chatActive = $(this).attr("data-name");
+        
+        $(".chatbox").removeClass("chat-active")
+
+        $('.chatbox[data-name = "' + chatActive + '"]').addClass("chat-active");
+
+        userAttivo()
+
+    })
 })
 
 
